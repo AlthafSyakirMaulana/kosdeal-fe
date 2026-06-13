@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jual Barang - KosDeal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-box-open"></i>
+                KosDeal
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="products.html">Jelajahi</a>
+                <a href="add-product.html" class="active btn btn-primary btn-sm">Jual Barang</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Jual <span class="highlight">Barang</span></h1>
+            <p>Upload barang kos kamu dan dapatkan pembeli dengan cepat</p>
+        </div>
+    </section>
+
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <form id="addProductForm">
+                    <div class="form-group">
+                        <label for="productName">Nama Barang</label>
+                        <input type="text" id="productName" placeholder="Contoh: Meja Belajar Lipat" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productCategory">Kategori</label>
+                        <select id="productCategory" required>
+                            <option value="">Pilih Kategori</option>
+                            <option value="Furniture">Furniture</option>
+                            <option value="Elektronik">Elektronik</option>
+                            <option value="Pakaian">Pakaian</option>
+                            <option value="Alat Masak">Alat Masak</option>
+                            <option value="Buku">Buku</option>
+                            <option value="Lainnya">Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productPrice">Harga (Rp)</label>
+                        <input type="number" id="productPrice" placeholder="Contoh: 50000" min="0" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productCondition">Kondisi</label>
+                        <select id="productCondition" required>
+                            <option value="">Pilih Kondisi</option>
+                            <option value="Baru">Baru</option>
+                            <option value="Seperti Baru">Seperti Baru</option>
+                            <option value="Baik">Baik</option>
+                            <option value="Cukup">Cukup</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productLocation">Lokasi</label>
+                        <input type="text" id="productLocation" placeholder="Contoh: Surabaya, Jember, Malang" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productContact">No. WhatsApp</label>
+                        <input type="text" id="productContact" placeholder="Contoh: 08123456789" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productDescription">Deskripsi</label>
+                        <textarea id="productDescription" rows="4" placeholder="Ceritakan kondisi barang, alasan jual, dll..." required></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="productImage">Foto Barang</label>
+                        <div class="image-upload" id="imageUpload">
+                            <i class="fas fa-camera"></i>
+                            <p>Klik untuk upload foto</p>
+                            <span>Format: JPG, PNG (max 5MB)</span>
+                            <input type="file" id="productImage" accept="image/*" hidden>
+                        </div>
+                        <div class="image-preview" id="imagePreview">
+                            <img id="previewImg" src="" alt="Preview">
+                            <button type="button" class="btn btn-sm btn-danger" id="removeImage">
+                                <i class="fas fa-times"></i> Hapus
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-upload"></i> Upload Barang
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-box-open"></i>
+                    <h3>KosDeal</h3>
+                    <p>Platform jual-beli barang kos second hand terpercaya di Indonesia.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="products.html">Jelajahi</a>
+                    <a href="add-product.html">Jual Barang</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Kategori</h4>
+                    <a href="products.html?category=Furniture">Furniture</a>
+                    <a href="products.html?category=Elektronik">Elektronik</a>
+                    <a href="products.html?category=Pakaian">Pakaian</a>
+                    <a href="products.html?category=Alat%20Masak">Alat Masak</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KosDeal. Made with <i class="fas fa-heart"></i> for anak kos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

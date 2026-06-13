@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelajahi Barang - KosDeal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-box-open"></i>
+                KosDeal
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="products.html" class="active">Jelajahi</a>
+                <a href="add-product.html" class="btn btn-primary btn-sm">Jual Barang</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Jelajahi <span class="highlight">Barang</span></h1>
+            <p>Temukan barang bekas kos berkualitas dengan harga terbaik</p>
+        </div>
+    </section>
+
+    <section class="search-section">
+        <div class="container">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Cari barang... (misal: meja, lampu, kulkas)">
+                <select id="categoryFilter">
+                    <option value="">Semua Kategori</option>
+                    <option value="Furniture">Furniture</option>
+                    <option value="Elektronik">Elektronik</option>
+                    <option value="Pakaian">Pakaian</option>
+                    <option value="Alat Masak">Alat Masak</option>
+                    <option value="Buku">Buku</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+                <select id="sortFilter">
+                    <option value="newest">Terbaru</option>
+                    <option value="oldest">Terlama</option>
+                    <option value="cheapest">Termurah</option>
+                    <option value="expensive">Termahal</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section">
+        <div class="container">
+            <div class="product-grid" id="allProducts">
+            </div>
+            <div class="empty-state" id="emptyState">
+                <i class="fas fa-box-open"></i>
+                <h3>Belum ada barang nih</h3>
+                <p>Jadi yang pertama jual barang kos kamu!</p>
+                <a href="add-product.html" class="btn btn-primary">Jual Barang Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-box-open"></i>
+                    <h3>KosDeal</h3>
+                    <p>Platform jual-beli barang kos second hand terpercaya di Indonesia.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="products.html">Jelajahi</a>
+                    <a href="add-product.html">Jual Barang</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Kategori</h4>
+                    <a href="products.html?category=Furniture">Furniture</a>
+                    <a href="products.html?category=Elektronik">Elektronik</a>
+                    <a href="products.html?category=Pakaian">Pakaian</a>
+                    <a href="products.html?category=Alat%20Masak">Alat Masak</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KosDeal. Made with <i class="fas fa-heart"></i> for anak kos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
