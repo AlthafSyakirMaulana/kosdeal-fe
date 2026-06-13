@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pesanan - KosDeal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-box-open"></i>
+                KosDeal
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="products.html">Jelajahi</a>
+                <a href="orders.html" class="active">Pesanan</a>
+                <a href="add-product.html" class="btn btn-primary btn-sm">Jual Barang</a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Pesanan <span class="highlight">Saya</span></h1>
+            <p>Kelola transaksi escrow dan status pengiriman</p>
+        </div>
+    </section>
+
+    <section class="orders-section">
+        <div class="container">
+            <div class="orders-stats">
+                <div class="order-stat-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <span class="order-stat-label">Saldo Escrow</span>
+                        <span class="order-stat-value" id="escrowBalanceDisplay">Rp 0</span>
+                    </div>
+                </div>
+                <div class="order-stat-card">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <span class="order-stat-label">Menunggu</span>
+                        <span class="order-stat-value" id="pendingCount">0</span>
+                    </div>
+                </div>
+                <div class="order-stat-card">
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <span class="order-stat-label">Selesai</span>
+                        <span class="order-stat-value" id="completedCount">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="orders-list" id="ordersList">
+            </div>
+        </div>
+    </section>
+
+    <section class="review-section">
+        <div class="container">
+            <h2>Beri <span class="highlight">Review</span></h2>
+            <p class="section-subtitle">Bagikan pengalaman kamu setelah bertransaksi</p>
+            <div class="form-container">
+                <form id="reviewForm">
+                    <div class="form-group">
+                        <label for="reviewProductId">ID Produk</label>
+                        <input type="text" id="reviewProductId" placeholder="Masukkan ID produk (contoh: s1, p12345)" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="reviewName">Nama Kamu</label>
+                            <input type="text" id="reviewName" placeholder="Nama panggilan" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="reviewRating">Rating</label>
+                            <select id="reviewRating" required>
+                                <option value="5">★★★★★ (5)</option>
+                                <option value="4">★★★★☆ (4)</option>
+                                <option value="3">★★★☆☆ (3)</option>
+                                <option value="2">★★☆☆☆ (2)</option>
+                                <option value="1">★☆☆☆☆ (1)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="reviewText">Review</label>
+                        <textarea id="reviewText" rows="3" placeholder="Ceritakan pengalaman kamu..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-star"></i> Kirim Review
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-box-open"></i>
+                    <h3>KosDeal</h3>
+                    <p>Platform jual-beli barang kos second hand terpercaya di Indonesia.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="products.html">Jelajahi</a>
+                    <a href="orders.html">Pesanan</a>
+                    <a href="add-product.html">Jual Barang</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Kategori</h4>
+                    <a href="products.html?category=Furniture">Furniture</a>
+                    <a href="products.html?category=Elektronik">Elektronik</a>
+                    <a href="products.html?category=Pakaian">Pakaian</a>
+                    <a href="products.html?category=Alat%20Masak">Alat Masak</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KosDeal. Made with <i class="fas fa-heart"></i> for anak kos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

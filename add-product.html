@@ -19,6 +19,7 @@
             <div class="nav-links">
                 <a href="index.html">Beranda</a>
                 <a href="products.html">Jelajahi</a>
+                <a href="orders.html">Pesanan</a>
                 <a href="add-product.html" class="active btn btn-primary btn-sm">Jual Barang</a>
             </div>
             <button class="hamburger" id="hamburger">
@@ -43,17 +44,35 @@
                         <input type="text" id="productName" placeholder="Contoh: Meja Belajar Lipat" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="productCategory">Kategori</label>
-                        <select id="productCategory" required>
-                            <option value="">Pilih Kategori</option>
-                            <option value="Furniture">Furniture</option>
-                            <option value="Elektronik">Elektronik</option>
-                            <option value="Pakaian">Pakaian</option>
-                            <option value="Alat Masak">Alat Masak</option>
-                            <option value="Buku">Buku</option>
-                            <option value="Lainnya">Lainnya</option>
-                        </select>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="productCategory">Kategori</label>
+                            <select id="productCategory" required>
+                                <option value="">Pilih Kategori</option>
+                                <option value="Furniture">Furniture</option>
+                                <option value="Elektronik">Elektronik</option>
+                                <option value="Pakaian">Pakaian</option>
+                                <option value="Alat Masak">Alat Masak</option>
+                                <option value="Buku">Buku</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="productCondition">Kondisi</label>
+                            <select id="productCondition" required>
+                                <option value="">Pilih Kondisi</option>
+                                <option value="Baru">Baru</option>
+                                <option value="Seperti Baru">Seperti Baru</option>
+                                <option value="Baik">Baik</option>
+                                <option value="Cukup">Cukup</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="smart-pricing" id="smartSuggestion" style="display:none;">
+                        <i class="fas fa-robot"></i>
+                        <span></span>
                     </div>
 
                     <div class="form-group">
@@ -61,20 +80,18 @@
                         <input type="number" id="productPrice" placeholder="Contoh: 50000" min="0" required>
                     </div>
 
-                    <div class="form-group">
-                        <label for="productCondition">Kondisi</label>
-                        <select id="productCondition" required>
-                            <option value="">Pilih Kondisi</option>
-                            <option value="Baru">Baru</option>
-                            <option value="Seperti Baru">Seperti Baru</option>
-                            <option value="Baik">Baik</option>
-                            <option value="Cukup">Cukup</option>
-                        </select>
-                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="productLocation">Lokasi</label>
+                            <input type="text" id="productLocation" placeholder="Contoh: Surabaya" required>
+                        </div>
 
-                    <div class="form-group">
-                        <label for="productLocation">Lokasi</label>
-                        <input type="text" id="productLocation" placeholder="Contoh: Surabaya, Jember, Malang" required>
+                        <div class="form-group">
+                            <label for="productCampus">Kampus</label>
+                            <select id="productCampus" required>
+                                <option value="">Pilih Kampus</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="form-group">
@@ -123,6 +140,7 @@
                     <h4>Navigasi</h4>
                     <a href="index.html">Beranda</a>
                     <a href="products.html">Jelajahi</a>
+                    <a href="orders.html">Pesanan</a>
                     <a href="add-product.html">Jual Barang</a>
                 </div>
                 <div class="footer-links">
