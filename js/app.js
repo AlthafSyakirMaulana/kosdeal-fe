@@ -118,9 +118,9 @@ function createProductCard(product) {
                 <div class="product-rating">${stars}</div>
                 <p class="product-desc">${product.description.substring(0, 80)}${product.description.length > 80 ? '...' : ''}</p>
                 <div class="product-actions">
-                    <a href="https://wa.me/${product.contact}?text=Halo%20Kak,%20saya%20tertarik%20dengan%20${encodeURIComponent(product.name)}%20dari%20KosDeal" target="_blank" class="btn btn-whatsapp btn-sm">
-                        <i class="fab fa-whatsapp"></i> Chat
-                    </a>
+                    <button class="btn btn-whatsapp btn-sm btn-chat" data-id="${product.id}" data-name="${product.name}" data-seller="${product.contact}">
+                        <i class="fas fa-comment-dots"></i> Chat
+                    </button>
                     <button class="btn btn-outline btn-sm btn-beli" data-id="${product.id}">
                         <i class="fas fa-shopping-cart"></i> Beli
                     </button>
@@ -387,6 +387,82 @@ document.addEventListener('DOMContentLoaded', async function() {
             document.getElementById('escrowProductId').value = product.id;
             modal.style.display = 'flex';
         }
+    });
+
+    document.addEventListener('click', function(e) {
+        const btn = e.target.closest('.btn-chat');
+        if (!btn) return;
+        const productId = btn.dataset.id;
+        const productName = btn.dataset.name;
+        const sellerContact = btn.dataset.seller;
+        const allProducts = getProducts();
+        const product = allProducts.find(p => p.id === productId);
+        if (!product) return;
+
+        const modal = document.getElementById('chatModal');
+        if (modal) {
+            document.getElementById('chatProductName').textContent = productName;
+            document.getElementById('chatSellerInfo').textContent = product.location + (product.campus ? ' - ' + product.campus : '');
+            document.getElementById('chatProductId').value = productId;
+            document.getElementById('chatSellerContact').value = sellerContact;
+            renderChatMessages(productId);
+            modal.style.display = 'flex';
+        }
+    });
+
+    const chatForm = document.getElementById('chatForm');
+    if (chatForm) {
+        chatForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const productId = document.getElementById('chatProductId').value;
+            const input = document.getElementById('chatInput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            const messages = getMessages();
+            messages.push({
+                id: 'msg' + Date.now(),
+                productId: productId,
+                sender: getCurrentUser(),
+                text: text,
+                time: new Date().toISOString()
+            });
+            saveMessages(messages);
+            input.value = '';
+            renderChatMessages(productId);
+        });
+    }
+
+    function renderChatMessages(productId) {
+        const container = document.getElementById('chatMessages');
+        if (!container) return;
+        const messages = getMessages().filter(m => m.productId === productId);
+        const currentUser = getCurrentUser();
+        if (messages.length === 0) {
+            container.innerHTML = '<p class="chat-empty">Belum ada pesan. Kirim pesan pertama!</p>';
+            return;
+        }
+        container.innerHTML = messages.map(m => `
+            <div class="chat-msg ${m.sender === currentUser ? 'chat-msg-own' : 'chat-msg-other'}">
+                <div class="chat-msg-bubble">
+                    <p class="chat-msg-text">${m.text}</p>
+                    <span class="chat-msg-time">${new Date(m.time).toLocaleTimeString('id-ID', {hour:'2-digit', minute:'2-digit'})}</span>
+                </div>
+            </div>
+        `).join('');
+        container.scrollTop = container.scrollHeight;
+    }
+
+    const closeChatModal = document.querySelector('.close-chat-modal');
+    if (closeChatModal) {
+        closeChatModal.addEventListener('click', function() {
+            document.getElementById('chatModal').style.display = 'none';
+        });
+    }
+
+    window.addEventListener('click', function(e) {
+        const modal = document.getElementById('chatModal');
+        if (e.target === modal) modal.style.display = 'none';
     });
 
     const escrowForm = document.getElementById('escrowForm');

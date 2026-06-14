@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil - KosDeal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-box-open"></i>
+                KosDeal
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="products.html">Jelajahi</a>
+                <a href="komunitas.html">Komunitas</a>
+                <a href="orders.html">Pesanan</a>
+                <a href="add-product.html" class="btn btn-primary btn-sm">Jual Barang</a>
+                <a href="profile.html" class="active nav-profile-icon"><i class="fas fa-user-circle"></i></a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Profil <span class="highlight">Saya</span></h1>
+            <p>Atur profil dan verifikasi akun kamu</p>
+        </div>
+    </section>
+
+    <section class="profile-section">
+        <div class="container">
+            <div class="profile-layout">
+                <div class="profile-sidebar">
+                    <div class="profile-avatar" id="profileAvatar">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h2 id="profileDisplayName">User</h2>
+                    <div id="profileBadges"></div>
+                    <div id="profileVerificationStatus"></div>
+                    <hr>
+                    <div class="profile-stats">
+                        <div><strong id="profileProductCount">0</strong> <span>Barang</span></div>
+                        <div><strong id="profileTerjualCount">0</strong> <span>Terjual</span></div>
+                    </div>
+                </div>
+                <div class="profile-main">
+                    <form id="profileForm">
+                        <div class="form-group">
+                            <label>Nama Panggilan</label>
+                            <input type="text" id="profileName" placeholder="Nama kamu" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Role / Status</label>
+                            <div class="role-selector" id="roleSelector">
+                                <label class="role-option">
+                                    <input type="radio" name="role" value="mahasiswa">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Mahasiswa</span>
+                                </label>
+                                <label class="role-option">
+                                    <input type="radio" name="role" value="pekerja">
+                                    <i class="fas fa-briefcase"></i>
+                                    <span>Pekerja</span>
+                                </label>
+                                <label class="role-option">
+                                    <input type="radio" name="role" value="pemilik kos">
+                                    <i class="fas fa-building"></i>
+                                    <span>Pemilik Kos</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="campusField" style="display:none;">
+                            <label>Kampus</label>
+                            <select id="profileCampus">
+                                <option value="">Pilih Kampus</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label>No. WhatsApp</label>
+                            <input type="text" id="profilePhone" placeholder="Contoh: 08123456789">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Bio</label>
+                            <textarea id="profileBio" rows="3" placeholder="Ceritakan sedikit tentang kamu..."></textarea>
+                        </div>
+
+                        <div id="verificationSection" style="display:none;">
+                            <hr>
+                            <h3><i class="fas fa-shield-alt"></i> Verifikasi Mahasiswa</h3>
+                            <p class="form-help">Scan KTM atau upload foto KTM untuk verifikasi</p>
+                            <div class="verif-methods">
+                                <button type="button" class="btn btn-outline verif-method-btn active" data-method="upload">
+                                    <i class="fas fa-upload"></i> Upload KTM
+                                </button>
+                                <button type="button" class="btn btn-outline verif-method-btn" data-method="scan">
+                                    <i class="fas fa-camera"></i> Scan KTM
+                                </button>
+                            </div>
+                            <div class="form-group" id="verifUploadMethod">
+                                <div class="image-upload" id="verifUpload">
+                                    <i class="fas fa-id-card"></i>
+                                    <p>Klik untuk upload KTM</p>
+                                    <span>Format: JPG, PNG (max 5MB)</span>
+                                    <input type="file" id="verifImage" accept="image/*" hidden>
+                                </div>
+                                <div class="image-preview" id="verifPreview" style="display:none;">
+                                    <img id="verifPreviewImg" src="" alt="Preview KTM">
+                                    <button type="button" class="btn btn-sm btn-danger" id="removeVerifImage">
+                                        <i class="fas fa-times"></i> Hapus
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="form-group" id="verifScanMethod" style="display:none;">
+                                <div class="scan-area" id="scanArea">
+                                    <video id="scanVideo" autoplay playsinline></video>
+                                    <canvas id="scanCanvas" style="display:none;"></canvas>
+                                    <div class="scan-overlay">
+                                        <div class="scan-frame"></div>
+                                        <p>Arahkan KTM ke kamera</p>
+                                    </div>
+                                    <button type="button" class="btn btn-primary btn-sm" id="captureScan">
+                                        <i class="fas fa-camera"></i> Ambil Foto
+                                    </button>
+                                </div>
+                                <div class="image-preview" id="scanPreview" style="display:none;">
+                                    <img id="scanPreviewImg" src="" alt="Hasil Scan">
+                                    <button type="button" class="btn btn-sm btn-danger" id="removeScan">
+                                        <i class="fas fa-times"></i> Ulangi
+                                    </button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="submitVerification">
+                                <i class="fas fa-paper-plane"></i> Ajukan Verifikasi
+                            </button>
+                            <p class="verif-info" id="verifInfo"></p>
+                        </div>
+
+                        <hr>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <i class="fas fa-save"></i> Simpan Profil
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-box-open"></i>
+                    <h3>KosDeal</h3>
+                    <p>Platform jual-beli barang kos second hand terpercaya di Indonesia.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="products.html">Jelajahi</a>
+                    <a href="komunitas.html">Komunitas</a>
+                    <a href="orders.html">Pesanan</a>
+                    <a href="add-product.html">Jual Barang</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Kategori</h4>
+                    <a href="products.html?category=Furniture">Furniture</a>
+                    <a href="products.html?category=Elektronik">Elektronik</a>
+                    <a href="products.html?category=Pakaian">Pakaian</a>
+                    <a href="products.html?category=Alat%20Masak">Alat Masak</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KosDeal. Made with <i class="fas fa-heart"></i> for anak kos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/profile.js"></script>
+</body>
+</html>

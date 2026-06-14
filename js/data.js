@@ -181,3 +181,80 @@ const campuses = [
 const categories = [
     'Furniture', 'Elektronik', 'Pakaian', 'Alat Masak', 'Buku', 'Lainnya'
 ];
+
+function getMessages() {
+    const stored = localStorage.getItem('kosdeal_messages');
+    return stored ? JSON.parse(stored) : [];
+}
+
+function saveMessages(messages) {
+    localStorage.setItem('kosdeal_messages', JSON.stringify(messages));
+}
+
+function getCurrentUser() {
+    let user = localStorage.getItem('kosdeal_current_user');
+    if (!user) {
+        user = 'User' + Date.now().toString().slice(-4);
+        localStorage.setItem('kosdeal_current_user', user);
+    }
+    return user;
+}
+
+function getUserProfile() {
+    const stored = localStorage.getItem('kosdeal_user_profile');
+    if (stored) return JSON.parse(stored);
+    const defaultProfile = {
+        name: getCurrentUser(),
+        role: '',
+        campus: '',
+        isVerified: false,
+        verificationImage: '',
+        verificationStatus: 'none',
+        phone: '',
+        bio: ''
+    };
+    localStorage.setItem('kosdeal_user_profile', JSON.stringify(defaultProfile));
+    return defaultProfile;
+}
+
+function saveUserProfile(profile) {
+    localStorage.setItem('kosdeal_user_profile', JSON.stringify(profile));
+}
+
+function getRoleBadge(role) {
+    const badges = {
+        'mahasiswa': '<span class="role-badge role-mahasiswa"><i class="fas fa-graduation-cap"></i> Mahasiswa</span>',
+        'pekerja': '<span class="role-badge role-pekerja"><i class="fas fa-briefcase"></i> Pekerja</span>',
+        'pemilik kos': '<span class="role-badge role-pemilik-kos"><i class="fas fa-building"></i> Pemilik Kos</span>'
+    };
+    return badges[role] || '';
+}
+
+function getVerificationBadge(isVerified) {
+    if (isVerified) {
+        return '<span class="verified-badge"><i class="fas fa-check-circle"></i> Terverifikasi</span>';
+    }
+    return '';
+}
+
+const komunitasDaerah = [
+    { id: 'surabaya', name: 'Surabaya', icon: 'fa-city', desc: 'Kos-kosan sekitar ITS, UNAIR, UNESA, UPN' },
+    { id: 'jakarta', name: 'Jakarta', icon: 'fa-building', desc: 'Kos-kosan sekitar UI, BINUS, Trisakti' },
+    { id: 'bandung', name: 'Bandung', icon: 'fa-mountain', desc: 'Kos-kosan sekitar ITB, UNPAD, Telkom' },
+    { id: 'malang', name: 'Malang', icon: 'fa-tree', desc: 'Kos-kosan sekitar UB, UM, UIN Malang' },
+    { id: 'bali', name: 'Bali', icon: 'fa-umbrella-beach', desc: 'Kos-kosan sekitar Udayana, ITB STIKOM Bali' },
+    { id: 'tangerang', name: 'Tangerang', icon: 'fa-industry', desc: 'Kos-kosan sekitar UMN, Untar, Pelita Harapan' },
+    { id: 'yogyakarta', name: 'Yogyakarta', icon: 'fa-temple', desc: 'Kos-kosan sekitar UGM, UNY, AMIKOM' },
+    { id: 'semarang', name: 'Semarang', icon: 'fa-anchor', desc: 'Kos-kosan sekitar UNDIP, UNNES' },
+    { id: 'jember', name: 'Jember', icon: 'fa-leaf', desc: 'Kos-kosan sekitar UNEJ, POLIJE' },
+    { id: 'makassar', name: 'Makassar', icon: 'fa-ship', desc: 'Kos-kosan sekitar UNHAS, UIN Alauddin' }
+];
+
+function getKomunitasMessages(daerahId) {
+    const stored = localStorage.getItem('kosdeal_komunitas_' + daerahId);
+    return stored ? JSON.parse(stored) : [];
+}
+
+function saveKomunitasMessages(daerahId, messages) {
+    localStorage.setItem('kosdeal_komunitas_' + daerahId, JSON.stringify(messages));
+}

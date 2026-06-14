@@ -19,8 +19,10 @@
             <div class="nav-links">
                 <a href="index.html">Beranda</a>
                 <a href="products.html" class="active">Jelajahi</a>
+                <a href="komunitas.html">Komunitas</a>
                 <a href="orders.html">Pesanan</a>
                 <a href="add-product.html" class="btn btn-primary btn-sm">Jual Barang</a>
+                <a href="profile.html" class="nav-profile-icon"><i class="fas fa-user-circle"></i></a>
             </div>
             <button class="hamburger" id="hamburger">
                 <i class="fas fa-bars"></i>
@@ -114,6 +116,22 @@
         </div>
     </div>
 
+    <div class="modal" id="chatModal">
+        <div class="modal-content chat-modal-content">
+            <span class="close-modal close-chat-modal">&times;</span>
+            <h2><i class="fas fa-comment-dots"></i> <span id="chatProductName"></span></h2>
+            <p class="modal-subtitle" id="chatSellerInfo"></p>
+            <div class="chat-box" id="chatMessages">
+            </div>
+            <form id="chatForm" class="chat-input-area">
+                <input type="hidden" id="chatProductId">
+                <input type="hidden" id="chatSellerContact">
+                <input type="text" id="chatInput" placeholder="Ketik pesan..." required autocomplete="off">
+                <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -126,6 +144,7 @@
                     <h4>Navigasi</h4>
                     <a href="index.html">Beranda</a>
                     <a href="products.html">Jelajahi</a>
+                    <a href="komunitas.html">Komunitas</a>
                     <a href="orders.html">Pesanan</a>
                     <a href="add-product.html">Jual Barang</a>
                 </div>
