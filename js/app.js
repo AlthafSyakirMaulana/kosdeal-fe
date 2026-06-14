@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', async function() {
             }
 
             if (category) result = result.filter(p => p.category === category);
-            if (campus) result = result.filter(p => p.campus === campus);
+            if (campus) result = result.filter(p => p.location === campus);
 
             switch (sort) {
                 case 'newest': result.sort((a, b) => new Date(b.date) - new Date(a.date)); break;
