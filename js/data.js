@@ -9,8 +9,7 @@ const sampleProducts = [
         campus: 'ITS',
         contact: '08123456789',
         description: 'Meja belajar lipat, masih layak pakai. Cocok untuk kos yang sempit. Sudah dipakai 1 tahun.',
-        image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=400&q=80',
-        date: '2024-01-15',
+        image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80',
         lat: -7.2797,
         lng: 112.7953,
         rating: 4.5,
@@ -31,7 +30,7 @@ const sampleProducts = [
         campus: 'UB',
         contact: '08765432198',
         description: 'Kulkas mini Polytron, dingin masih normal. Cocok untuk kos. Alasan jual: pindah kos yang sudah ada kulkas.',
-        image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1571175443880-49e1d25b2bc5?w=400&q=80', // kulkas
         date: '2024-01-20',
         lat: -7.9666,
         lng: 112.6326,
@@ -52,7 +51,7 @@ const sampleProducts = [
         campus: 'UNEJ',
         contact: '08567891234',
         description: 'Kompor gas portable, baru dipakai 2 bulan. Lengkap dengan selang dan regulator.',
-        image: 'https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=400&q=80', // kompor
         date: '2024-02-01',
         lat: -8.1845,
         lng: 113.6681,
@@ -66,7 +65,7 @@ const sampleProducts = [
     },
     {
         id: 's4',
-        name: 'Buku Kalkulus STIKOM',
+        name: 'Buku Kalkulus',
         category: 'Buku',
         price: 25000,
         condition: 'Baik',
@@ -74,7 +73,7 @@ const sampleProducts = [
         campus: 'ITS',
         contact: '08901234567',
         description: 'Buku kalkulus untuk mahasiswa STIKOM. Masih bagus, tidak ada yang sobek.',
-        image: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&q=80', // buku
         date: '2024-02-05',
         lat: -7.2797,
         lng: 112.7953,
@@ -95,7 +94,7 @@ const sampleProducts = [
         campus: 'UNAIR',
         contact: '08134567890',
         description: 'Kipas angin dinding Maspion, masih berfungsi normal. Agak berisik tapi masih kencang.',
-        image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&q=80', // kipas
         date: '2024-02-10',
         lat: -7.2684,
         lng: 112.7628,
@@ -116,7 +115,7 @@ const sampleProducts = [
         campus: 'UM',
         contact: '08234567891',
         description: 'Rak sepatu 3 tingkat, bisa muat 6-9 pasang sepatu. Mudah dibongkar pasang.',
-        image: 'https://images.unsplash.com/photo-1544457070-4cd773b4d71e?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1544457070-4cd773b4d71e?w=400&q=80', // rak sepatu
         date: '2024-02-15',
         lat: -7.9828,
         lng: 112.6303,
@@ -138,7 +137,7 @@ const sampleProducts = [
         campus: 'UNEJ',
         contact: '08345678912',
         description: 'Set panci 3 ukuran. Masih bagus, tidak penyok. Alasan jual: jarang masak.',
-        image: 'https://images.unsplash.com/photo-1584990347449-a6f0e3e25e5a?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1584990347449-a6f0e3e25e5a?w=400&q=80', // panci
         date: '2024-02-20',
         lat: -8.1845,
         lng: 113.6681,
@@ -151,7 +150,7 @@ const sampleProducts = [
     },
     {
         id: 's8',
-        name: 'Baju Kemeja Pria Lengan Panjang',
+        name: 'Kemeja Pria Lengan Panjang',
         category: 'Pakaian',
         price: 30000,
         condition: 'Seperti Baru',
@@ -159,7 +158,7 @@ const sampleProducts = [
         campus: 'ITS',
         contact: '08456789123',
         description: 'Kemeja pria ukuran L, warna putih. Baru dipakai 2 kali. Cocok untuk interview atau kerja.',
-        image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1596755094514-f87e34085b2c?w=400&q=80', // kemeja
         date: '2024-03-01',
         lat: -7.2797,
         lng: 112.7953,
@@ -181,7 +180,7 @@ const sampleProducts = [
         campus: 'UI',
         contact: '08111122334',
         description: 'Kasur lipat busa ukuran 120x200 cm. Masih nyaman dipakai. Cocok untuk kosan petak.',
-        image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?w=400&q=80', // kasur
         date: '2024-03-05',
         lat: -6.3605,
         lng: 106.8267,
@@ -203,7 +202,7 @@ const sampleProducts = [
         campus: 'BINUS',
         contact: '08112233445',
         description: 'Rice cooker mini 0.6L, cukup untuk 1-2 orang. Baru dipakai 3 bulan. Alasan jual: pindah kos.',
-        image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80', // rice cooker
         date: '2024-03-10',
         lat: -6.2088,
         lng: 106.8456,
@@ -225,7 +224,7 @@ const sampleProducts = [
         campus: 'Trisakti',
         contact: '08113344556',
         description: 'Meja kerja minimalis ukuran 80x50 cm. Ada rak kecil. Cocok untuk WFH atau belajar.',
-        image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80', // meja kerja
         date: '2024-03-15',
         lat: -6.1702,
         lng: 106.7903,
@@ -238,7 +237,7 @@ const sampleProducts = [
     },
     {
         id: 's12',
-        name: 'Laptop Lenovo ThinkPad',
+        name: 'Laptop ThinkPad',
         category: 'Elektronik',
         price: 2500000,
         condition: 'Baik',
@@ -246,7 +245,7 @@ const sampleProducts = [
         campus: 'ITB',
         contact: '08114455667',
         description: 'Lenovo ThinkPad X260, i5, 8GB RAM, SSD 256GB. Layar 12.5 inch. Cocok untuk coding dan tugas.',
-        image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=400&q=80', // laptop
         date: '2024-03-20',
         lat: -6.8894,
         lng: 107.6105,
@@ -268,7 +267,7 @@ const sampleProducts = [
         campus: 'UNPAD',
         contact: '08115566778',
         description: 'Tas ransel Eiger 40L, warna hitam. Masih bagus, resleting lancar. Cocok untuk kuliah atau traveling.',
-        image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=400&q=80', // tas
         date: '2024-03-25',
         lat: -6.9217,
         lng: 107.6075,
@@ -290,7 +289,7 @@ const sampleProducts = [
         campus: 'Telkom',
         contact: '08116677889',
         description: 'Kipas angin portable rechargeable. Baru dipakai 1 bulan. Cocok untuk kos yang panas.',
-        image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?w=400&q=80', // kipas portable
         date: '2024-04-01',
         lat: -6.9733,
         lng: 107.6305,
@@ -311,7 +310,7 @@ const sampleProducts = [
         campus: 'Udayana',
         contact: '08117788990',
         description: 'Sprei set single bed warna biru navy. Masih baru, belum dipakai. Lengkap dengan sarung bantal.',
-        image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=400&q=80', // sprei
         date: '2024-04-05',
         lat: -8.7936,
         lng: 115.1589,
@@ -333,7 +332,7 @@ const sampleProducts = [
         campus: 'ITB STIKOM Bali',
         contact: '08118899001',
         description: 'Magic com Miyako 1L. Masih berfungsi normal. Alasan jual: dapat rice cooker baru dari ibu.',
-        image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&q=80', // magic com
         date: '2024-04-10',
         lat: -8.6705,
         lng: 115.2126,
@@ -346,7 +345,7 @@ const sampleProducts = [
     },
     {
         id: 's17',
-        name: 'Buku Novel Kumpulan Cerpen',
+        name: 'Novel Kumpulan Cerpen',
         category: 'Buku',
         price: 15000,
         condition: 'Baik',
@@ -354,7 +353,7 @@ const sampleProducts = [
         campus: 'Udayana',
         contact: '08119900112',
         description: 'Kumpulan cerpen karya penulis lokal. Masih bagus, tidak ada yang sobek. Cocok untuk mengisi waktu luang.',
-        image: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&q=80', // novel
         date: '2024-04-15',
         lat: -8.7936,
         lng: 115.1589,
@@ -375,7 +374,7 @@ const sampleProducts = [
         campus: 'UMN',
         contact: '08121001122',
         description: 'Lemari pakaian 2 pintu ukuran 120x50 cm. Masih layak pakai, ada sedikit gores di bagian samping.',
-        image: 'https://images.unsplash.com/photo-1597006335770-25b6a72cb883?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1597006335770-25b6a72cb883?w=400&q=80', // lemari
         date: '2024-04-20',
         lat: -6.2488,
         lng: 106.6404,
@@ -397,7 +396,7 @@ const sampleProducts = [
         campus: 'Untar',
         contact: '08122112233',
         description: 'Setrika Philips steam iron. Baru dipakai 2 kali. Alasan jual: dapat setrika baru.',
-        image: 'https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1585659722983-3a675dabf23d?w=400&q=80', // setrika
         date: '2024-04-25',
         lat: -6.1702,
         lng: 106.6404,
@@ -418,7 +417,7 @@ const sampleProducts = [
         campus: 'Pelita Harapan',
         contact: '08123223344',
         description: 'Gantungan baju standing, bisa muat 10-15 baju. Mudah dibongkar pasang. Cocok untuk kos.',
-        image: 'https://images.unsplash.com/photo-1544457070-4cd773b4d71e?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1544457070-4cd773b4d71e?w=400&q=80', // gantungan baju
         date: '2024-05-01',
         lat: -6.2402,
         lng: 106.6404,
@@ -440,7 +439,7 @@ const sampleProducts = [
         campus: 'UGM',
         contact: '08124334455',
         description: 'Matras yoga tebal 6mm. Baru dipakai 3 kali. Cocok untuk olahraga di kos.',
-        image: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=400&q=80', // matras yoga
         date: '2024-05-05',
         lat: -7.7712,
         lng: 110.3777,
@@ -462,7 +461,7 @@ const sampleProducts = [
         campus: 'UGM',
         contact: '08125445566',
         description: 'Buku Ekonomi Mikro edisi 3. Masih bagus, ada highlighter di beberapa halaman.',
-        image: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&q=80', // buku ekonomi
         date: '2024-05-10',
         lat: -7.7712,
         lng: 110.3777,
@@ -483,7 +482,7 @@ const sampleProducts = [
         campus: 'UNY',
         contact: '08126556677',
         description: 'Lampu belajar LED clip-on, USB rechargeable. Masih baru dalam kotak. Cocok untuk belajar malam.',
-        image: 'https://images.unsplash.com/photo-1507473885765-e6ed057ab6fe?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1507473885765-e6ed057ab6fe?w=400&q=80', // lampu belajar
         date: '2024-05-15',
         lat: -7.7828,
         lng: 110.3768,
@@ -505,7 +504,7 @@ const sampleProducts = [
         campus: 'UNDIP',
         contact: '08127667788',
         description: 'Meja belajar lipat ukuran 70x45 cm. Ringan dan mudah dipindah. Cocok untuk kos sempit.',
-        image: 'https://images.unsplash.com/photo-1518455027359-f3f8164ba6bd?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=400&q=80', // meja lipat semarang
         date: '2024-05-20',
         lat: -7.0501,
         lng: 110.4381,
@@ -527,7 +526,7 @@ const sampleProducts = [
         campus: 'UNNES',
         contact: '08128778899',
         description: 'Set panci 2 ukuran (18cm & 20cm). Masih bagus, tidak penyok. Alasan jual: jarang masak.',
-        image: 'https://images.unsplash.com/photo-1584990347449-a6f0e3e25e5a?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1584990347449-a6f0e3e25e5a?w=400&q=80', // panci set
         date: '2024-05-25',
         lat: -7.0501,
         lng: 110.4381,
@@ -548,7 +547,7 @@ const sampleProducts = [
         campus: 'UNDIP',
         contact: '08129889900',
         description: 'Hoodie polos hitam ukuran L. Baru dipakai 2 kali. Bahan tebal dan hangat.',
-        image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=400&q=80', // hoodie
         date: '2024-06-01',
         lat: -7.0501,
         lng: 110.4381,
@@ -570,7 +569,7 @@ const sampleProducts = [
         campus: 'UNHAS',
         contact: '08130990011',
         description: 'Dispenser air mini, bisa untuk galon kecil. Masih berfungsi normal. Ada sedikit retak di bagian belakang.',
-        image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=400&q=80', // dispenser
         date: '2024-06-05',
         lat: -5.1354,
         lng: 119.4238,
@@ -592,7 +591,7 @@ const sampleProducts = [
         campus: 'UIN Alauddin',
         contact: '08131001122',
         description: 'Alat sholat travel lengkap (sajadah, mukena, tasbih). Masih baru, belum dipakai. Cocok untuk bekal kos.',
-        image: 'https://images.unsplash.com/photo-1609599002809-1f8c82c2e2b8?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1609599002809-1f8c82c2e2b8?w=400&q=80', // alat sholat
         date: '2024-06-10',
         lat: -5.1354,
         lng: 119.4238,
@@ -614,7 +613,7 @@ const sampleProducts = [
         campus: 'UNHAS',
         contact: '08132112233',
         description: 'Rak piring 2 tingkat, bisa muat 10-15 piring. Mudah dibersihkan. Cocok untuk dapur kos.',
-        image: 'https://images.unsplash.com/photo-1544457070-4cd773b4d71e?w=400&q=80',
+        image: 'https://images.unsplash.com/photo-1544457070-4cd773b4d71e?w=400&q=80', // rak piring
         date: '2024-06-15',
         lat: -5.1354,
         lng: 119.4238,
