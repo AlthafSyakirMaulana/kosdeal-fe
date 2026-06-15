@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Service - KosDeal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-box-open"></i>
+                KosDeal
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Beranda</a>
+                <a href="products.html">Jelajahi</a>
+                <a href="komunitas.html">Komunitas</a>
+                <a href="orders.html">Pesanan</a>
+                <a href="customer-service.html" class="active">Bantuan</a>
+                <a href="add-product.html" class="btn btn-primary btn-sm">Jual Barang</a>
+                <a href="profile.html" class="nav-profile-icon"><i class="fas fa-user-circle"></i></a>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Customer Service</h1>
+            <p>Punya pertanyaan atau masalah? Kami siap membantu!</p>
+        </div>
+    </section>
+
+    <section class="cs-section">
+        <div class="container">
+            <div class="cs-grid">
+                <div class="cs-card" id="csChatCard">
+                    <div class="cs-card-icon">
+                        <i class="fas fa-comment-dots"></i>
+                    </div>
+                    <h3>Chat Langsung via Website</h3>
+                    <p>Ngobrol langsung dengan tim KosDeal melalui chat di website. Cepat dan mudah!</p>
+                    <ul class="cs-features">
+                        <li><i class="fas fa-check-circle"></i> Respon cepat</li>
+                        <li><i class="fas fa-check-circle"></i> Bisa sambil browsing</li>
+                        <li><i class="fas fa-check-circle"></i> Gratis</li>
+                    </ul>
+                    <button class="btn btn-primary btn-block" id="openCsChat">
+                        <i class="fas fa-comment-dots"></i> Mulai Chat
+                    </button>
+                </div>
+                <div class="cs-card">
+                    <div class="cs-card-icon whatsapp-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>Hubungi via WhatsApp</h3>
+                    <p>Chat tim KosDeal via WhatsApp. Simpan nomornya biar gampang dihubungi lagi!</p>
+                    <ul class="cs-features">
+                        <li><i class="fas fa-check-circle"></i> 24/7</li>
+                        <li><i class="fas fa-check-circle"></i> Bisa kirim foto</li>
+                        <li><i class="fas fa-check-circle"></i> Notifikasi langsung</li>
+                    </ul>
+                    <a href="https://wa.me/6289601719166?text=Halo%20KosDeal%2C%20saya%20butuh%20bantuan" target="_blank" class="btn btn-whatsapp btn-block">
+                        <i class="fab fa-whatsapp"></i> Chat WhatsApp (Deandra)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cs-faq">
+        <div class="container">
+            <h2>Pertanyaan <span class="highlight">Umum</span></h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Bagaimana cara membeli barang?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cari barang yang kamu suka, klik "Beli", lalu isi data pembayaran. Dana akan diamankan via escrow KosDeal sampai barang kamu terima.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Bagaimana cara menjual barang?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Klik "Jual Barang" di navigasi, upload foto, isi info barang, dan tentukan harga. Barang kamu akan langsung muncul di marketplace!</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Apa itu sistem escrow?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Escrow adalah sistem pembayaran aman dimana dana pembeli ditahan sementara oleh KosDeal sampai barang diterima. Barang sampai, baru dana dirilis ke penjual.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Bagaimana cara chat dengan penjual?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Klik tombol "Chat" di kartu barang untuk mengirim pesan ke penjual. Kamu bisa tanya kondisi barang, negosiasi harga, atau atur lokasi transaksi.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="csChatModal">
+        <div class="modal-content chat-modal-content">
+            <span class="close-modal close-cs-chat-modal">&times;</span>
+            <h2><i class="fas fa-headset"></i> Customer Service</h2>
+            <p class="modal-subtitle">Tim KosDeal siap membantu kamu</p>
+            <div class="chat-box" id="csChatMessages">
+            </div>
+            <form id="csChatForm" class="chat-input-area">
+                <input type="text" id="csChatInput" placeholder="Ketik pesan..." required autocomplete="off">
+                <button type="submit" class="btn btn-primary btn-sm"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-box-open"></i>
+                    <h3>KosDeal</h3>
+                    <p>Platform jual-beli barang kos second hand terpercaya di Indonesia. Dengan sistem escrow, smart pricing, dan logistik hyperlocal.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <a href="index.html">Beranda</a>
+                    <a href="products.html">Jelajahi</a>
+                    <a href="komunitas.html">Komunitas</a>
+                    <a href="orders.html">Pesanan</a>
+                    <a href="add-product.html">Jual Barang</a>
+                    <a href="customer-service.html">Customer Service</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Kategori</h4>
+                    <a href="products.html?category=Furniture">Furniture</a>
+                    <a href="products.html?category=Elektronik">Elektronik</a>
+                    <a href="products.html?category=Pakaian">Pakaian</a>
+                    <a href="products.html?category=Alat%20Masak">Alat Masak</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 KosDeal. Made with <i class="fas fa-heart"></i> for anak kos.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/customer-service.js"></script>
+</body>
+</html>

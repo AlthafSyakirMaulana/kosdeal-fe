@@ -1620,6 +1620,157 @@ footer {
     color: var(--danger);
 }
 
+/* Customer Service */
+.cs-section {
+    padding: 40px 0 60px;
+}
+
+.cs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cs-card {
+    background: var(--white);
+    border-radius: var(--radius);
+    padding: 40px 32px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
+    transition: all 0.3s;
+}
+
+.cs-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+}
+
+.cs-card-icon {
+    width: 80px;
+    height: 80px;
+    background: var(--primary-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.cs-card-icon i {
+    font-size: 36px;
+    color: var(--primary);
+}
+
+.cs-card-icon.whatsapp-icon {
+    background: #e8f5e9;
+}
+
+.cs-card-icon.whatsapp-icon i {
+    color: var(--whatsapp);
+}
+
+.cs-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.cs-card p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.cs-features {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 24px;
+    padding: 0;
+}
+
+.cs-features li {
+    padding: 6px 0;
+    font-size: 14px;
+    color: var(--dark);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.cs-features li i {
+    color: var(--success);
+    font-size: 16px;
+}
+
+/* FAQ */
+.cs-faq {
+    padding: 0 0 80px;
+}
+
+.cs-faq h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.faq-list {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.faq-item {
+    background: var(--white);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border);
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--dark);
+    font-family: inherit;
+    text-align: left;
+    transition: background 0.2s;
+}
+
+.faq-question:hover {
+    background: var(--light);
+}
+
+.faq-question i {
+    transition: transform 0.3s;
+    color: var(--gray);
+    font-size: 14px;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 0 24px;
+}
+
+.faq-answer p {
+    color: var(--gray);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .hero .container {
